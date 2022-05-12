@@ -18,52 +18,93 @@ html {
 
 .min-hand {
   width: 8px;
-  height: 130px;
+  height: 115px;
   position: absolute;
-  left: 121px;
-  top: 110px;
-  border: none;
-  transform: rotate(-45deg);
-  transform-origin: 50% 15px;
-}
-/* .min-hand {
-  width: 10px;
-  height: 125px;
   position: absolute;
-  left: 120px;
+  left: 50%;
   top: 50%;
-  transform-origin: top;
-} */
+  transform: translate(-50%, -10%) rotate(145deg);
+  transform-origin: 50% 10%;
+}
 
 .hour-hand {
   width: 12px;
-  height: 100px;
+  height: 90px;
   position: absolute;
-  left: 119px;
-  top: 115px;
-  transform: rotate(90deg);
-  transform-origin: 50% 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -10%) rotate(45deg);
+  transform-origin: 50% 10%;
 }
 
 .second-hand {
   background-color: red;
   width: 2px;
-  height: 130px;
+  height: 115px;
   position: absolute;
-  left: 124px;
-  top: 110px;
-  border: none;
-  transform: rotate(45deg);
-  transform-origin: 50% 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -10%) rotate(95deg);
+  transform-origin: 50% 10%;
 }
 
 .axle {
   background-color: rgb(85, 85, 195);
   border: 2px solid rgb(188, 188, 239);
+  border-radius: 50%;
   height: 2px;
   width: 2px;
   position: absolute;
-  left: 122px;
-  top: 122px;
-  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.tick {
+  position: absolute;
+  background-color: black;
+  height: 8px;
+  width: 4px;
+  left: 50%;
+  top: 50%;
+}
+
+#tick-1 {
+  transform: translate(-50%, -50%) rotate(-150deg) translate(0, 115px);
+}
+#tick-2 {
+  transform: translate(-50%, -50%) rotate(-120deg) translate(0, 115px);
+}
+#tick-3 {
+  transform: translate(-50%, -50%) rotate(-90deg) translate(0, 115px);
+}
+#tick-4 {
+  transform: translate(-50%, -50%) rotate(-60deg) translate(0, 115px);
+}
+#tick-5 {
+  transform: translate(-50%, -50%) rotate(-30deg) translate(0, 115px);
+}
+#tick-6 {
+  transform: translate(-50%, -50%) rotate(0deg) translate(0, 115px);
+}
+#tick-7 {
+  transform: translate(-50%, -50%) rotate(30deg) translate(0, 115px);
+}
+#tick-8 {
+  transform: translate(-50%, -50%) rotate(60deg) translate(0, 115px);
+}
+#tick-9 {
+  transform: translate(-50%, -50%) rotate(90deg) translate(0, 115px);
+}
+#tick-10 {
+  transform: translate(-50%, -50%) rotate(120deg) translate(0, 115px);
+}
+#tick-11 {
+  transform: translate(-50%, -50%) rotate(150deg) translate(0, 115px);
+}
+#tick-12 {
+  transform: translate(-50%, -50%) rotate(180deg) translate(0, 115px);
 }
