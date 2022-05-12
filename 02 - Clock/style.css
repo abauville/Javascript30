@@ -36,21 +36,34 @@ html {
 } */
 
 .hour-hand {
-  width: 10px;
+  width: 12px;
   height: 100px;
   position: absolute;
-  left: 120px;
-  top: 110px;
+  left: 119px;
+  top: 115px;
   transform: rotate(90deg);
-  transform-origin: 50% 15px;
+  transform-origin: 50% 10px;
 }
 
 .second-hand {
-  width: 1px;
-  height: 80px;
+  background-color: red;
+  width: 2px;
+  height: 130px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: rotate(180deg);
-  transform-origin: top;
+  left: 124px;
+  top: 110px;
+  border: none;
+  transform: rotate(45deg);
+  transform-origin: 50% 15px;
+}
+
+.axle {
+  background-color: rgb(85, 85, 195);
+  border: 2px solid rgb(188, 188, 239);
+  height: 2px;
+  width: 2px;
+  position: absolute;
+  left: 122px;
+  top: 122px;
+  border-radius: 50%;
 }
