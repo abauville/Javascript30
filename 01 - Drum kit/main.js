@@ -6,6 +6,10 @@ keys.forEach( (key, ind) => {
     const audio = document.querySelector(`audio[data-key="${key.dataset.key}"]`);
     playSound(key, audio);
   })
+  key.addEventListener("transitionend", (event) => {
+    if (event.propertyName !== "transform") return;
+    event.currentTarget.classList.remove("playing");
+  })
 });
 
 document.addEventListener("keydown", (event) => {
@@ -20,8 +24,5 @@ document.addEventListener("keydown", (event) => {
 function playSound(key, audio) {
   audio.currentTime = 0; // allows to replay an already playing sound
   audio.play();
-  key.classList.add("playing");
-  setTimeout(() => {
-    key.classList.remove("playing");
-  }, 70);
+  key.classList.toggle("playing");
 }
