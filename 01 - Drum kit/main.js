@@ -1,21 +1,27 @@
 const keys = document.querySelectorAll(".key");
-const audios = document.querySelectorAll("audio");
-
-const key2audio = {};
 
 keys.forEach( (key, ind) => {
-  key2audio[key.dataset.key] = audios[ind];
-  key.addEventListener("click", (event) => playSound(event))
+  key.addEventListener("click", (event) => {
+    const key = event.currentTarget;
+    const audio = document.querySelector(`audio[data-key="${key.dataset.key}"]`);
+    playSound(key, audio);
+  })
 });
 
-function playSound(event) {
-  const key = event.currentTarget;
-  audio = key2audio[key.dataset.key];
-  console.log(key, audio);
+document.addEventListener("keydown", (event) => {
+  const k = event.keyCode;
+  const key = document.querySelector(`.key[data-key="${k}"]`);
+  const audio = document.querySelector(`audio[data-key="${k}"]`);
+  if (key) {
+    playSound(key, audio);
+  }
+});
+
+function playSound(key, audio) {
+  audio.currentTime = 0; // allows to replay an already playing sound
   audio.play();
   key.classList.add("playing");
   setTimeout(() => {
     key.classList.remove("playing");
   }, 70);
 }
-
