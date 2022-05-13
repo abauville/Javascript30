@@ -23,8 +23,9 @@ html {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -10%) rotate(145deg);
+  transform: translate(-50%, -10%) rotate(180deg);
   transform-origin: 50% 10%;
+  transition: 0.5s;
 }
 
 .hour-hand {
@@ -34,8 +35,9 @@ html {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -10%) rotate(45deg);
+  transform: translate(-50%, -10%) rotate(180deg);
   transform-origin: 50% 10%;
+  transition: 0.5s;
 }
 
 .second-hand {
@@ -46,8 +48,9 @@ html {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -10%) rotate(95deg);
+  transform: translate(-50%, -10%) rotate(180deg);
   transform-origin: 50% 10%;
+  transition: 0.1s;
 }
 
 .axle {
