@@ -17,8 +17,8 @@ function set_clock_position(date) {
   sec_hand.style.transform = `translate(-50%, -10%) rotate(${Math.PI + sec_angle}rad)`  
 
   // To prevent a rapid counterclockwise rotation when the clock goes around 0
-  sec === 0 ? sec_hand.style.transition = "none" : sec_hand.style.transition = "0.5s";
-  min === 0 ? min_hand.style.transition = "none" : min_hand.style.transition = "0.5s";
-  hr === 0 ?  hr_hand.style.transition = "none"  : hr_hand.style.transition = "0.5s";
+  sec === 0 ? sec_hand.style.transitionDuration = "0s" : sec_hand.style.transitionDuration = "all 0.5s";
+  min === 0 ? min_hand.style.transitionDuration = "0s" : min_hand.style.transitionDuration = "all 0.5s";
+  hr === 0 ?  hr_hand.style.transitionDuration = "0s"  : hr_hand.style.transitionDuration = "all 0.5s";
 }
 setInterval(() => set_clock_position(new Date()), 1000);

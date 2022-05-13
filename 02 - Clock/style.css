@@ -32,7 +32,6 @@ html {
   width: 12px;
   height: 90px;
   position: absolute;
-  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -10%) rotate(180deg);
@@ -45,12 +44,12 @@ html {
   width: 2px;
   height: 115px;
   position: absolute;
-  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -10%) rotate(180deg);
   transform-origin: 50% 10%;
-  transition: 0.1s;
+  transition-timing-function: cubic-bezier(0, 2.3, 0.61, 0.95);
+  transition-duration: 0.1s;
 }
 
 .axle {
